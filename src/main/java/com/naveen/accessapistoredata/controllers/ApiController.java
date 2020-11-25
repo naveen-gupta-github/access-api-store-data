@@ -12,7 +12,7 @@ import com.naveen.accessapistoredata.models.Profile;
 import com.naveen.accessapistoredata.models.RequestObject;
 
 
-@RestController
+@RestController   						//Use of @Controller  would need a ViewResolver i.e. an UI.  Thymleaf is a work around for that
 public class ApiController {
 
 	@Autowired
@@ -28,7 +28,7 @@ public class ApiController {
 	
 	}
 	
-	@GetMapping("/SaveProfiles")
+	@GetMapping("/SaveProfiles")    //using GetMapping so to run this in browser, PostMapping makes much more sense here
 	public String  saveProfiles(){
 		
 	        List<Profile> profiles =  proxy.getProfiles(new RequestObject());

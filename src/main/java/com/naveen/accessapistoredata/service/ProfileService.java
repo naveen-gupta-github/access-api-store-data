@@ -14,9 +14,7 @@ public class ProfileService {
 
 	@Autowired
 	ProfileRepo repo;
-	
-	@Autowired
-	ApiServiceProxy proxy;
+
 	
 	public boolean saveProfiles(List<Profile> profiles) {
 		
