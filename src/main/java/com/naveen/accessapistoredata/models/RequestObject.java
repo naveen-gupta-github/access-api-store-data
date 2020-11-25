@@ -1,0 +1,37 @@
+package com.naveen.accessapistoredata.models;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+
+//@JsonPOJOBuilder
+
+public class RequestObject {
+
+	@JsonProperty("token")
+   private final String TOKEN = "1XwGzQCPDSx-DgpZuzRzQw";
+	
+	@JsonProperty("data")
+	private  Data data = new Data("cryptoUUID", "name", "personGender", "phoneMobile", "numberInt|1,5", "addressCity", "30");
+	
+	public RequestObject() {
+	}
+
+	public String getToken() {
+		return TOKEN;
+	}
+
+	public Data getData() {
+		return data;
+	}
+
+	@Override
+	public String toString() {
+		return "RequestObject [TOKEN=" + TOKEN + ", data=" + data + "]";
+	}
+
+	
+
+
+
+	
+	
+}
